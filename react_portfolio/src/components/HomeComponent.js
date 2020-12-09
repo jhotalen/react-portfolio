@@ -1,18 +1,19 @@
 import React from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import logo from "../assets/logo.jpg";
+/*import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';*/
 /*import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 import { Loading } from "./LoadingComponent";*/
 
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <body id="indexBody">
           <header class="jumbotron jumbotron-fluid">
             <div class="container">
               <div class="row justify-content-start">
                 <div class="col-4 col-md-3 col-lg-2 align-self-center">
-                  <img src="images\logo.jpg" height="100px" />
+                  <img src={logo} height="100px" />
                 </div>
                 <div class="col-sm-4 ">
                   <h1>
@@ -164,15 +165,17 @@ class Home extends React.Component {
           </footer>
 
           {/*<!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->*/}
-          <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-          <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-          <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+          {<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>}
+          {
+            <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+          }
+          {/*<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>*/}
 
-          <script>
-            $(document).ready(function(){$("#dealModal").modal("show")});
-          </script>
+          {/*<script>
+           {$(document).ready(function(){$("#dealModal").modal("show")})}
+          </script>*/}
         </body>
-      </div>
+      </React.Fragment>
     );
   }
 }
